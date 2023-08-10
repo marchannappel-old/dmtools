@@ -3,6 +3,7 @@ package de.trauma.backend.article.controller;
 import de.trauma.backend.article.domain.Article;
 import de.trauma.backend.article.domain.ArticleType;
 import de.trauma.backend.article.domain.Category;
+import de.trauma.backend.world.domain.World;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class ArticleDTO {
     private final String pronunciation;
     private final String content;
     private final String image;
+    private final World world;
     private final ArticleType type;
     private final List<Category> categories;
 
@@ -21,6 +23,7 @@ public class ArticleDTO {
         this.pronunciation = article.getPronunciation();
         this.content = article.getContent();
         this.image = article.getImage();
+        this.world = article.getWorld();
         this.type = article.getType();
         this.categories = article.getCategories();
     }
@@ -43,6 +46,10 @@ public class ArticleDTO {
 
     public String getImage() {
         return image;
+    }
+
+    public World getWorld() {
+        return world;
     }
 
     public ArticleType getType() {

@@ -1,8 +1,10 @@
 package de.trauma.backend.world.repository;
 
+import de.trauma.backend.article.repository.ArticleEntity;
 import de.trauma.backend.world.domain.World;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
@@ -17,6 +19,9 @@ public class WorldEntity {
     @Column
     private String system;
 
+    @OneToMany(mappedBy = "world")
+    private List<ArticleEntity> articles;
+
     public WorldEntity() {
     }
 
@@ -24,6 +29,13 @@ public class WorldEntity {
         this.id = id;
         this.name = name;
         this.system = system;
+    }
+
+    public WorldEntity(Long id, String name, String system, List<ArticleEntity> articles) {
+        this.id = id;
+        this.name = name;
+        this.system = system;
+        this.articles = articles;
     }
 
     public WorldEntity(World world) {
@@ -54,5 +66,13 @@ public class WorldEntity {
 
     public void setSystem(String system) {
         this.system = system;
+    }
+
+    public List<ArticleEntity> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<ArticleEntity> articles) {
+        this.articles = articles;
     }
 }

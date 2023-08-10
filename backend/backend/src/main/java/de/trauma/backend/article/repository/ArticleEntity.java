@@ -1,6 +1,7 @@
 package de.trauma.backend.article.repository;
 
 import de.trauma.backend.article.domain.Article;
+import de.trauma.backend.world.repository.WorldEntity;
 
 import javax.persistence.*;
 import java.util.List;
@@ -25,6 +26,10 @@ public class ArticleEntity {
     private String image;
 
     @ManyToOne
+    @JoinColumn(name = "world_id")
+    private WorldEntity world;
+
+    @ManyToOne
     @JoinColumn(name = "type_id")
     private ArticleTypeEntity type;
 
@@ -39,12 +44,13 @@ public class ArticleEntity {
     public ArticleEntity() {
     }
 
-    public ArticleEntity(Long id, String title, String pronunciation, String content, String image, ArticleTypeEntity type) {
+    public ArticleEntity(Long id, String title, String pronunciation, String content, String image, WorldEntity world, ArticleTypeEntity type) {
         this.id = id;
         this.title = title;
         this.pronunciation = pronunciation;
         this.content = content;
         this.image = image;
+        this.world = world;
         this.type = type;
     }
 
@@ -54,7 +60,8 @@ public class ArticleEntity {
         this.pronunciation = article.getPronunciation();
         this.content = article.getContent();
         this.image = article.getImage();
-        this.type = article.getType();
+        this.world = new WorldEntity(article.getWorld());
+        this.type = new ArticleTypeEntity(article.getType());
     }
 
     public Long getId() {
@@ -95,6 +102,14 @@ public class ArticleEntity {
 
     public void setImage(String image) {
         this.image = image;
+    }
+
+    public WorldEntity getWorld() {
+        return world;
+    }
+
+    public void setWorld(WorldEntity world) {
+        this.world = world;
     }
 
     public ArticleTypeEntity getType() {

@@ -1,11 +1,15 @@
 package de.trauma.backend.world.domain;
 
+import de.trauma.backend.article.domain.Article;
 import de.trauma.backend.world.repository.WorldEntity;
+
+import java.util.List;
 
 public class World {
     private Long id;
     private String name;
     private String system;
+    private List<Article> articles;
 
     public World(WorldEntity entity) {
         this.id = entity.getId();
@@ -41,5 +45,13 @@ public class World {
 
     public void setSystem(String system) {
         this.system = system;
+    }
+
+    public List<Article> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<Article> articles) {
+        this.articles = articles;
     }
 }
