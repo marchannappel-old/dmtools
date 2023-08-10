@@ -1,19 +1,20 @@
 package de.trauma.backend.article.domain;
 
-import de.trauma.backend.article.repository.CategoryEntity;
+import de.trauma.backend.article.repository.ArticleTypeEntity;
 
-public class Category {
+public class ArticleType {
     private Long id;
+
     private String name;
 
-    public Category(Long id, String name) {
-        this.id = id;
-        this.name = name;
-    }
-
-    public Category(CategoryEntity entity) {
+    public ArticleType(ArticleTypeEntity entity) {
         this.id = entity.getId();
         this.name = entity.getName();
+    }
+
+    public ArticleType(Long id, String name) {
+        this.id = id;
+        this.name = name;
     }
 
     public Long getId() {

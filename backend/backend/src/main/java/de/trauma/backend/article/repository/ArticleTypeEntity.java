@@ -1,5 +1,7 @@
 package de.trauma.backend.article.repository;
 
+import de.trauma.backend.article.domain.ArticleType;
+
 import javax.persistence.*;
 
 @Entity
