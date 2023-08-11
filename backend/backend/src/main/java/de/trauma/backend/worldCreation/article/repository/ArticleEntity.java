@@ -29,9 +29,13 @@ public class ArticleEntity {
     @JoinColumn(name = "world_id")
     private WorldEntity world;
 
-    @ManyToOne
-    @JoinColumn(name = "type_id")
-    private ArticleTypeEntity type;
+    @ManyToMany
+    @JoinTable(
+            name = "article_type",
+            joinColumns = @JoinColumn(name = "article_id"),
+            inverseJoinColumns = @JoinColumn(name = "articletype_id")
+    )
+    private List<ArticleTypeEntity> types;
 
     @ManyToMany
     @JoinTable(
@@ -44,16 +48,6 @@ public class ArticleEntity {
     public ArticleEntity() {
     }
 
-    public ArticleEntity(Long id, String title, String pronunciation, String content, String image, WorldEntity world, ArticleTypeEntity type) {
-        this.id = id;
-        this.title = title;
-        this.pronunciation = pronunciation;
-        this.content = content;
-        this.image = image;
-        this.world = world;
-        this.type = type;
-    }
-
     public ArticleEntity(Article article) {
         this.id = article.getId();
         this.title = article.getTitle();
@@ -61,7 +55,7 @@ public class ArticleEntity {
         this.content = article.getContent();
         this.image = article.getImage();
         this.world = new WorldEntity(article.getWorld());
-        this.type = new ArticleTypeEntity(article.getType());
+        this.types.add(new ArticleTypeEntity(article.getType()));
     }
 
     public Long getId() {
@@ -112,12 +106,12 @@ public class ArticleEntity {
         this.world = world;
     }
 
-    public ArticleTypeEntity getType() {
-        return type;
+    public List<ArticleTypeEntity> getType() {
+        return types;
     }
 
-    public void setType(ArticleTypeEntity type) {
-        this.type = type;
+    public void setType(List<ArticleTypeEntity> type) {
+        this.types = type;
     }
 
     public List<CategoryEntity> getCategories() {

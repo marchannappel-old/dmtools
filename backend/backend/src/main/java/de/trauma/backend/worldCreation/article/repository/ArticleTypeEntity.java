@@ -3,6 +3,7 @@ package de.trauma.backend.worldCreation.article.repository;
 import de.trauma.backend.worldCreation.article.domain.ArticleType;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table
@@ -13,6 +14,9 @@ public class ArticleTypeEntity {
 
     @Column
     private String name;
+
+    @ManyToMany(mappedBy = "types")
+    private List<ArticleEntity> articles;
 
     public ArticleTypeEntity() {
     }
@@ -41,5 +45,13 @@ public class ArticleTypeEntity {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public List<ArticleEntity> getArticles() {
+        return articles;
+    }
+
+    public void setArticles(List<ArticleEntity> articles) {
+        this.articles = articles;
     }
 }
