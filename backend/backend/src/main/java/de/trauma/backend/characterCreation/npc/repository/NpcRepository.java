@@ -1,4 +1,8 @@
 package de.trauma.backend.characterCreation.npc.repository;
 
-public interface NpcRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface NpcRepository extends JpaRepository<NpcEntity, Long> {
 }

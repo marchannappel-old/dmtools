@@ -1,4 +1,8 @@
 package de.trauma.backend.characterCreation.characterclass.repository;
 
-public interface CharacterClassRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface CharacterClassRepository extends JpaRepository<CharacterClassEntity, Long> {
 }
