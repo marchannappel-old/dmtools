@@ -1,4 +1,4 @@
-package de.trauma.backend.campaignCreation.monster.service;
+package de.trauma.backend.campaignCreation.monsterCreation.monster.service;
 
 import org.springframework.stereotype.Service;
 
