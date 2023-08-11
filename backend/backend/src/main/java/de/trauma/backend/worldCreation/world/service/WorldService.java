@@ -1,6 +1,7 @@
 package de.trauma.backend.worldCreation.world.service;
 
 import de.trauma.backend.worldCreation.world.domain.World;
+import de.trauma.backend.worldCreation.world.exceptions.WorldNotFoundException;
 import de.trauma.backend.worldCreation.world.repository.WorldEntity;
 import de.trauma.backend.worldCreation.world.repository.WorldRepository;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class WorldService {
         return new World(this.worldRepository.save(new WorldEntity(world)));
     }
 
-    public World updateWorld(Long id, World world) throws ClassNotFoundException {
+    public World updateWorld(Long id, World world) throws WorldNotFoundException {
         Optional<World> existingWorldCheck = this.worldRepository.findById(id)
                 .map(World::new);
 
@@ -44,7 +45,7 @@ public class WorldService {
             return new World(this.worldRepository.save(new WorldEntity(existingWorld)));
         }
         else {
-            throw new ClassNotFoundException("World not found with id: " + id);
+            throw new WorldNotFoundException("World not found with id: " + id);
         }
     }
 

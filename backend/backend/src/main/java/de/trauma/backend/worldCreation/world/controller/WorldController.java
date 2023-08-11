@@ -1,6 +1,7 @@
 package de.trauma.backend.worldCreation.world.controller;
 
 import de.trauma.backend.worldCreation.world.domain.World;
+import de.trauma.backend.worldCreation.world.exceptions.WorldNotFoundException;
 import de.trauma.backend.worldCreation.world.service.WorldService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,10 +27,10 @@ public class WorldController {
     }
 
     @GetMapping("/{id}")
-    public WorldDTO read(@PathVariable Long id) throws ClassNotFoundException {
+    public WorldDTO read(@PathVariable Long id) {
         return this.worldService.findWorldById(id)
                 .map(WorldDTO::new)
-                .orElseThrow(ClassNotFoundException::new);
+                .orElseThrow();
     }
 
     @PostMapping

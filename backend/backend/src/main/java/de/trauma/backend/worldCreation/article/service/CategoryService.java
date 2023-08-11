@@ -1,6 +1,7 @@
 package de.trauma.backend.worldCreation.article.service;
 
 import de.trauma.backend.worldCreation.article.domain.Category;
+import de.trauma.backend.worldCreation.article.exceptions.CategoryNotFoundException;
 import de.trauma.backend.worldCreation.article.repository.CategoryEntity;
 import de.trauma.backend.worldCreation.article.repository.CategoryRepository;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class CategoryService {
         return new Category(this.categoryRepository.save(new CategoryEntity(category)));
     }
 
-    public Category updateCategory(Long id, Category category) throws ClassNotFoundException {
+    public Category updateCategory(Long id, Category category) throws CategoryNotFoundException {
         Optional<Category> existingCategory = this.categoryRepository.findById(id)
                 .map(Category::new);
 
@@ -43,7 +44,7 @@ public class CategoryService {
             return new Category(this.categoryRepository.save(new CategoryEntity(categoryUpdated)));
         }
         else {
-            throw new ClassNotFoundException("Category not found with id: " + id);
+            throw new CategoryNotFoundException("Category not found with id: " + id);
         }
     }
 

@@ -1,6 +1,7 @@
 package de.trauma.backend.worldCreation.article.controller;
 
 import de.trauma.backend.worldCreation.article.domain.Article;
+import de.trauma.backend.worldCreation.article.exceptions.ArticleNotFoundException;
 import de.trauma.backend.worldCreation.article.service.ArticleService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -26,10 +27,10 @@ public class ArticleController {
     }
 
     @GetMapping("/{id}")
-    public ArticleDTO read(@PathVariable Long id) throws ClassNotFoundException {
+    public ArticleDTO read(@PathVariable Long id) {
         return this.articleService.findArticleById(id)
                 .map(ArticleDTO::new)
-                .orElseThrow(ClassNotFoundException::new);
+                .orElseThrow();
     }
 
     @PostMapping

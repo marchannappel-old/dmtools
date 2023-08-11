@@ -1,6 +1,7 @@
 package de.trauma.backend.worldCreation.article.service;
 
 import de.trauma.backend.worldCreation.article.domain.ArticleType;
+import de.trauma.backend.worldCreation.article.exceptions.ArticleTypeNotFoundException;
 import de.trauma.backend.worldCreation.article.repository.ArticleTypeEntity;
 import de.trauma.backend.worldCreation.article.repository.ArticleTypeRepository;
 import org.springframework.stereotype.Service;
@@ -32,7 +33,7 @@ public class ArticleTypeService {
         return new ArticleType(this.articleTypeRepository.save(new ArticleTypeEntity(articleType)));
     }
 
-    public ArticleType updateArticleType(Long id, ArticleType articleType) throws ClassNotFoundException {
+    public ArticleType updateArticleType(Long id, ArticleType articleType) throws ArticleTypeNotFoundException {
         Optional<ArticleType> existingArticleType = this.articleTypeRepository.findById(id)
                 .map(ArticleType::new);
 
@@ -43,7 +44,7 @@ public class ArticleTypeService {
             return new ArticleType(this.articleTypeRepository.save(new ArticleTypeEntity(existingType)));
         }
         else {
-            throw new ClassNotFoundException("ArticleType not found with id: " + id);
+            throw new ArticleTypeNotFoundException("ArticleType not found with id: " + id);
         }
     }
 

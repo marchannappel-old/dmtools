@@ -32,7 +32,7 @@ public class Article {
         this.content = entity.getContent();
         this.image = entity.getImage();
         this.world = new World(entity.getWorld());
-        this.type = new ArticleType(entity.getType());
+        this.type = new ArticleType(entity.getType().get(1));
         this.categories = entity.getCategories().stream().map(Category::new).toList();
     }
 
