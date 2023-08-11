@@ -41,9 +41,9 @@
       - [ ] CRUDL Encounter
       - [ ] Generate Encounter
       - [ ] Enemy Creation
-        - [ ] CRUDL Enemy
-          - [ ] CRUDL Difficulty
-          - [ ] CRUDL Actions
+        - [X] CRUDL Enemy
+          - [X] CRUDL Difficulty
+          - [X] CRUDL Actions
           - [ ] Generate Loot
         - [ ] Generate Enemy
       - [ ] Location Creation
