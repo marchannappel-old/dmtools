@@ -1,7 +1,7 @@
 package de.trauma.backend.campaignCreation.monsterCreation.monster.repository;
 
-import de.trauma.backend.campaignCreation.encounter.domain.Encounter;
-import de.trauma.backend.campaignCreation.encounter.repository.EncounterEntity;
+import de.trauma.backend.campaignCreation.encounterCreation.encounter.domain.Encounter;
+import de.trauma.backend.campaignCreation.encounterCreation.encounter.repository.EncounterEntity;
 import de.trauma.backend.campaignCreation.monsterCreation.action.repository.ActionEntity;
 import de.trauma.backend.campaignCreation.monsterCreation.difficulty.repository.DifficultyEntity;
 import de.trauma.backend.campaignCreation.monsterCreation.monster.domain.Monster;
@@ -134,7 +134,7 @@ public class MonsterEntity {
     )
     private List<ActionEntity> actions;
 
-    @ManyToMany(mappedBy = "monster")
+    @ManyToMany(mappedBy = "monsters")
     private List<Encounter> encounters;
 
     public MonsterEntity() {

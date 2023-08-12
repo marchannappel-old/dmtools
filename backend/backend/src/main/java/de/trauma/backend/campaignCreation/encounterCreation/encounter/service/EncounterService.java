@@ -1,4 +1,4 @@
-package de.trauma.backend.campaignCreation.encounter.service;
+package de.trauma.backend.campaignCreation.encounterCreation.encounter.service;
 
 import org.springframework.stereotype.Service;
 

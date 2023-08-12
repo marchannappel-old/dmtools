@@ -1,6 +1,6 @@
 package de.trauma.backend.campaignCreation.monsterCreation.monster.domain;
 
-import de.trauma.backend.campaignCreation.encounter.domain.Encounter;
+import de.trauma.backend.campaignCreation.encounterCreation.encounter.domain.Encounter;
 import de.trauma.backend.campaignCreation.monsterCreation.action.domain.Action;
 import de.trauma.backend.campaignCreation.monsterCreation.difficulty.domain.Difficulty;
 import de.trauma.backend.campaignCreation.monsterCreation.sense.domain.Sense;

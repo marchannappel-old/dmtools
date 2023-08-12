@@ -1,6 +1,6 @@
 package de.trauma.backend.campaignCreation.monsterCreation.monster.controller;
 
-import de.trauma.backend.campaignCreation.encounter.controller.EncounterDTO;
+import de.trauma.backend.campaignCreation.encounterCreation.encounter.controller.EncounterDTO;
 import de.trauma.backend.campaignCreation.monsterCreation.action.controller.ActionDTO;
 import de.trauma.backend.campaignCreation.monsterCreation.difficulty.controller.DifficultyDTO;
 import de.trauma.backend.campaignCreation.monsterCreation.monster.domain.Monster;
