@@ -4,6 +4,8 @@ import de.trauma.backend.campaigns.encounters.consequence.controller.Consequence
 import de.trauma.backend.campaigns.encounters.encounter.domain.Encounter;
 import de.trauma.backend.campaigns.encounters.obstacle.controller.ObstacleDTO;
 import de.trauma.backend.campaigns.encounters.tactic.controller.TacticDTO;
+import de.trauma.backend.campaigns.monsters.monster.controller.MonsterDTO;
+import de.trauma.backend.campaigns.plots.plot.controller.PlotDTO;
 import de.trauma.backend.characters.item.controller.ItemDTO;
 import de.trauma.backend.characters.npc.controller.NpcDTO;
 
@@ -19,6 +21,8 @@ public class EncounterDTO {
     private final List<TacticDTO> tactics;
     private final List<ItemDTO> rewards;
     private final List<ConsequenceDTO> consequences;
+    private final List<MonsterDTO> monsters;
+    private final List<PlotDTO> plots;
 
     public EncounterDTO(Encounter encounter) {
         this.id = encounter.getId();
@@ -30,6 +34,8 @@ public class EncounterDTO {
         this.tactics = encounter.getTactics().stream().map(TacticDTO::new).toList();
         this.rewards = encounter.getRewards().stream().map(ItemDTO::new).toList();
         this.consequences = encounter.getConsequences().stream().map(ConsequenceDTO::new).toList();
+        this.monsters = encounter.getMonsters().stream().map(MonsterDTO::new).toList();
+        this.plots = encounter.getPlots().stream().map(PlotDTO::new).toList();
     }
 
     public Long getId() {
@@ -66,5 +72,13 @@ public class EncounterDTO {
 
     public List<ConsequenceDTO> getConsequences() {
         return consequences;
+    }
+
+    public List<MonsterDTO> getMonsters() {
+        return monsters;
+    }
+
+    public List<PlotDTO> getPlots() {
+        return plots;
     }
 }

@@ -48,6 +48,8 @@ public class EncounterService {
             updatedEncounter.setTactics(encounter.getTactics());
             updatedEncounter.setRewards(encounter.getRewards());
             updatedEncounter.setConsequences(encounter.getConsequences());
+            updatedEncounter.setMonsters(encounter.getMonsters());
+            updatedEncounter.setPlots(encounter.getPlots());
 
             return new Encounter(this.encounterRepository.save(new EncounterEntity(updatedEncounter)));
         }

@@ -4,6 +4,8 @@ import de.trauma.backend.campaigns.encounters.consequence.repository.Consequence
 import de.trauma.backend.campaigns.encounters.encounter.domain.Encounter;
 import de.trauma.backend.campaigns.encounters.obstacle.repository.ObstacleEntity;
 import de.trauma.backend.campaigns.encounters.tactic.repository.TacticEntity;
+import de.trauma.backend.campaigns.monsters.monster.repository.MonsterEntity;
+import de.trauma.backend.campaigns.plots.plot.repository.PlotEntity;
 import de.trauma.backend.characters.item.repository.ItemEntity;
 import de.trauma.backend.characters.npc.repository.NpcEntity;
 
@@ -66,6 +68,17 @@ public class EncounterEntity {
     )
     private List<ConsequenceEntity> consequences;
 
+    @ManyToMany
+    @JoinTable(
+            name = "encounter_monsters",
+            joinColumns = @JoinColumn(name = "encounter_id"),
+            inverseJoinColumns = @JoinColumn(name = "monster_id")
+    )
+    private List<MonsterEntity> monsters;
+
+    @ManyToMany(mappedBy = "encounters")
+    private List<PlotEntity> plots;
+
     public EncounterEntity() {
     }
 
@@ -79,6 +92,8 @@ public class EncounterEntity {
         this.tactics = encounter.getTactics().stream().map(TacticEntity::new).toList();
         this.rewards = encounter.getRewards().stream().map(ItemEntity::new).toList();
         this.consequences = encounter.getConsequences().stream().map(ConsequenceEntity::new).toList();
+        this.monsters = encounter.getMonsters().stream().map(MonsterEntity::new).toList();
+        this.plots = encounter.getPlots().stream().map(PlotEntity::new).toList();
     }
 
     public Long getId() {
@@ -151,5 +166,21 @@ public class EncounterEntity {
 
     public void setConsequences(List<ConsequenceEntity> consequences) {
         this.consequences = consequences;
+    }
+
+    public List<MonsterEntity> getMonsters() {
+        return monsters;
+    }
+
+    public void setMonsters(List<MonsterEntity> monsters) {
+        this.monsters = monsters;
+    }
+
+    public List<PlotEntity> getPlots() {
+        return plots;
+    }
+
+    public void setPlots(List<PlotEntity> plots) {
+        this.plots = plots;
     }
 }

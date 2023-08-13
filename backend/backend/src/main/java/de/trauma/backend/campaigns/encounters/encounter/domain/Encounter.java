@@ -4,9 +4,14 @@ import de.trauma.backend.campaigns.encounters.consequence.domain.Consequence;
 import de.trauma.backend.campaigns.encounters.encounter.repository.EncounterEntity;
 import de.trauma.backend.campaigns.encounters.obstacle.domain.Obstacle;
 import de.trauma.backend.campaigns.encounters.tactic.domain.Tactic;
+import de.trauma.backend.campaigns.monsters.monster.domain.Monster;
+import de.trauma.backend.campaigns.plots.plot.domain.Plot;
 import de.trauma.backend.characters.item.domain.Item;
 import de.trauma.backend.characters.npc.domain.Npc;
 
+import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import java.util.List;
 
 public class Encounter {
@@ -19,6 +24,8 @@ public class Encounter {
     private List<Tactic> tactics;
     private List<Item> rewards;
     private List<Consequence> consequences;
+    private List<Monster> monsters;
+    private List<Plot> plots;
 
     public Encounter(EncounterEntity encounter) {
         this.id = encounter.getId();
@@ -30,6 +37,8 @@ public class Encounter {
         this.tactics = encounter.getTactics().stream().map(Tactic::new).toList();
         this.rewards = encounter.getRewards().stream().map(Item::new).toList();
         this.consequences = encounter.getConsequences().stream().map(Consequence::new).toList();
+        this.monsters = encounter.getMonsters().stream().map(Monster::new).toList();
+        this.plots = encounter.getPlots().stream().map(Plot::new).toList();
     }
 
     public Long getId() {
@@ -102,5 +111,21 @@ public class Encounter {
 
     public void setConsequences(List<Consequence> consequences) {
         this.consequences = consequences;
+    }
+
+    public List<Monster> getMonsters() {
+        return monsters;
+    }
+
+    public void setMonsters(List<Monster> monsters) {
+        this.monsters = monsters;
+    }
+
+    public List<Plot> getPlots() {
+        return plots;
+    }
+
+    public void setPlots(List<Plot> plots) {
+        this.plots = plots;
     }
 }
