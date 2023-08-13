@@ -35,10 +35,10 @@
     - [ ] CRUDL Weapon
     - [ ] CRUDL Armor
   - [ ] Plot Creation
-    - [ ] CRUDL Plot
+    - [x] CRUDL Plot
     - [ ] Generate Quest
     - [ ] Encounter Creation
-      - [ ] CRUDL Encounter
+      - [x] CRUDL Encounter
       - [ ] Generate Encounter
       - [ ] Enemy Creation
         - [X] CRUDL Enemy
