@@ -4,8 +4,8 @@ import de.trauma.backend.campaigns.encounters.consequence.domain.Consequence;
 import de.trauma.backend.campaigns.encounters.encounter.repository.EncounterEntity;
 import de.trauma.backend.campaigns.encounters.obstacle.domain.Obstacle;
 import de.trauma.backend.campaigns.encounters.tactic.domain.Tactic;
-import de.trauma.backend.characterCreation.item.domain.Item;
-import de.trauma.backend.characterCreation.npc.domain.Npc;
+import de.trauma.backend.characters.item.domain.Item;
+import de.trauma.backend.characters.npc.domain.Npc;
 
 import java.util.List;
 
