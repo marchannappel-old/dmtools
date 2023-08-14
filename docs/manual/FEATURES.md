@@ -1,0 +1,74 @@
+# Featues in Tools
+
+- [X] World Creation
+  - [X] CRUDL Worlds
+  - [X] CRUDL Articles
+    - [X] CRUDL Article Types
+    - [X] CRUDL Categories
+- [ ] Campaign Creation
+  - [ ] CRUDL Campaigns
+  - [ ] Character Creation
+    - [ ] CRUDL Characters
+      - [ ] CRUDL Conditions
+      - [ ] CRUDL Races
+        - [ ] CRUDL Defenses
+      - [ ] CRUDL Classes
+        - [ ] CRUDL Features
+        - [ ] CRUDL Proficiencies
+          - [ ] CRUDL Skills
+        - [ ] CRUDL Equipment
+      - [ ] CRUDL Abilities
+      - [ ] CRUDL Background
+        - [ ] CRUDL Languages
+        - [ ] CRUDL BackgroundFeatures
+        - [ ] CRUDL Alignment
+        - [ ] CRUDL Lifestyle
+      - [ ] CRUDL Inventory
+    - [ ] Generate Names
+  - [ ] NPC Creation
+    - [ ] CRUDL NPC
+    - [ ] Generate NPC
+  - [ ] Item Creation
+    - [ ] CRUDL Items
+    - [ ] CRUDL ItemType
+    - [ ] CRUDL ItemCategory
+    - [ ] CRUDL Weapon
+    - [ ] CRUDL Armor
+  - [ ] Plot Creation
+    - [x] CRUDL Plot
+    - [ ] Generate Quest
+    - [ ] Encounter Creation
+      - [x] CRUDL Encounter
+      - [ ] Generate Encounter
+      - [ ] Enemy Creation
+        - [X] CRUDL Enemy
+          - [X] CRUDL Difficulty
+          - [X] CRUDL Actions
+          - [ ] Generate Loot
+        - [ ] Generate Enemy
+      - [ ] Location Creation
+        - [ ] CRUDL Location
+        - [ ] Generate Location
+  - [ ] Session Creation
+    - [ ] CRUDL Session
+    - [ ] CRUDL Session Log
+      - [ ] CRUDL Entry
+    - [ ] Environment Control
+      - [ ] CRUDL Timer
+      - [ ] Weather Control
+    - [ ] Dice
+      - [ ] Roll Dice
+      - [ ] Reset Dice
+    - [ ] Note Creation
+      - [ ] CRUDL Notes
+    - [ ] Manage Players
+      - [ ] Manage Experience
+      - [ ] Manage HitPoints
+      - [ ] Manage Ability Point Setting
+      - [ ] Manage Initiative
+      - [ ] Manage Inventory
+  - [ ] Primer Creation
+    - [ ] CRUDL Primer
+- [ ] Account Creation
+  - [ ] CRUDL Players
+  - [ ] CRUDL Roles
