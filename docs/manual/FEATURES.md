@@ -1,74 +1,84 @@
 # Featues in Tools
 
-- [X] World Creation
-  - [X] CRUDL Worlds
-  - [X] CRUDL Articles
-    - [X] CRUDL Article Types
-    - [X] CRUDL Categories
+- [ ] Authentication
+  - [ ] OAuth2 Authentication with Login, Registration, Forgot Password, Verification Email
+  - [ ] Roles for Users
+- [x] World Creation
+  - [x] CRUDL Worlds
+  - [x] CRUDL Articles
+  - [x] CRUDL Article Types
+  - [x] CRUDL Categories
 - [ ] Campaign Creation
-  - [ ] CRUDL Campaigns
-  - [ ] Character Creation
+  - [ ] CRUDL Campaign
+  - [ ] Encounters
+    - [x] CRUDL Encounters
+    - [x] CRUDL Consequences
+    - [x] CRUDL Obstacles
+    - [x] CRUDL Tactics
+    - [ ]  Generate Encounters
+  - [ ] Monsters
+    - [x] CRUDL Monsters
+    - [x] CRUDL Actions
+    - [x] CRUDL Difficulties
+    - [x] CRUDL Senses
+    - [ ]  Generate Monsters
+    - [ ]  Generate Loot
+  - [ ] Plots
+    - [x] CRUDL Plots
+    - [x] CRUDL PlotTypes
+    - [x] CRUDL Theme
+    - [ ] Quests
+      - [ ] CRUDL Quests
+      - [ ] CRUDL Quest Type
+      - [ ] Generate Quest
+    - [ ] Locations
+      - [ ] CRUDL Locations
+      - [ ] Generate Location
+  - [ ] Sessions
+    - [ ] Session
+      - [ ]  CRUDL Sessions
+      - [ ]  Manage Players
+      - [ ]  Manage Experience
+      - [ ]  Manage HitPoints
+      - [ ]  Manage Abilitiy Point Setting (Skilling)
+      - [ ]  Manage Initiative
+      - [ ]  Manage Inventories
+    - [ ] Session Log
+      - [ ] CRUDL SessionLogs
+      - [ ] CRUDL SessionLogEntry
+    - [ ] CRUDL Notes
+    - [ ] Environment Controls
+      - [ ] Track Weather
+      - [ ] Track ingame time
+      - [ ] Track ingame time relative to real time
+    - [ ] Dice Controls
+      - [ ] Roll Dice (d4, d6, d8, d10, d12, d20)
+      - [ ] Roll Saving Throws
+      - [ ] Roll Attack Throws
+      - [ ] Roll Spell Throws
+- [ ] Character Creation
+  - [ ]  Characters
     - [ ] CRUDL Characters
-      - [ ] CRUDL Conditions
-      - [ ] CRUDL Races
-        - [ ] CRUDL Defenses
-      - [ ] CRUDL Classes
-        - [ ] CRUDL Features
-        - [ ] CRUDL Proficiencies
-          - [ ] CRUDL Skills
-        - [ ] CRUDL Equipment
-      - [ ] CRUDL Abilities
-      - [ ] CRUDL Background
-        - [ ] CRUDL Languages
-        - [ ] CRUDL BackgroundFeatures
-        - [ ] CRUDL Alignment
-        - [ ] CRUDL Lifestyle
-      - [ ] CRUDL Inventory
-    - [ ] Generate Names
-  - [ ] NPC Creation
-    - [ ] CRUDL NPC
-    - [ ] Generate NPC
-  - [ ] Item Creation
-    - [ ] CRUDL Items
-    - [ ] CRUDL ItemType
-    - [ ] CRUDL ItemCategory
-    - [ ] CRUDL Weapon
-    - [ ] CRUDL Armor
-  - [ ] Plot Creation
-    - [x] CRUDL Plot
-    - [ ] Generate Quest
-    - [ ] Encounter Creation
-      - [x] CRUDL Encounter
-      - [ ] Generate Encounter
-      - [ ] Enemy Creation
-        - [X] CRUDL Enemy
-          - [X] CRUDL Difficulty
-          - [X] CRUDL Actions
-          - [ ] Generate Loot
-        - [ ] Generate Enemy
-      - [ ] Location Creation
-        - [ ] CRUDL Location
-        - [ ] Generate Location
-  - [ ] Session Creation
-    - [ ] CRUDL Session
-    - [ ] CRUDL Session Log
-      - [ ] CRUDL Entry
-    - [ ] Environment Control
-      - [ ] CRUDL Timer
-      - [ ] Weather Control
-    - [ ] Dice
-      - [ ] Roll Dice
-      - [ ] Reset Dice
-    - [ ] Note Creation
-      - [ ] CRUDL Notes
-    - [ ] Manage Players
-      - [ ] Manage Experience
-      - [ ] Manage HitPoints
-      - [ ] Manage Ability Point Setting
-      - [ ] Manage Initiative
-      - [ ] Manage Inventory
-  - [ ] Primer Creation
-    - [ ] CRUDL Primer
-- [ ] Account Creation
-  - [ ] CRUDL Players
-  - [ ] CRUDL Roles
+    - [ ]  CRUDL Alignments
+    - [ ]  CRUDL Abilities
+    - [ ]  CRUDL Background
+    - [ ]  CRUDL Classes
+    - [ ]  CRUDL Conditions
+    - [ ]  CRUDL Defenses
+    - [ ]  CRUDL Features
+    - [ ]  CRUDL Languages
+    - [ ]  CRUDL Lifestyles
+    - [ ]  CRUDL Proficiencies
+    - [ ]  CRUDL Races
+    - [ ]  CRUDL Skills
+    - [ ]  CRUDL Inventory
+    - [ ]  Generate Character Names
+  - [ ]  Items
+    - [ ]  CRUDL Equipment
+    - [ ]  CRUDL Items
+    - [ ]  CRUDL ItemType
+    - [ ]  CRUDL ItemCategory
+    - [ ]  Generate Items
+  - [ ]  NPCs
+    - [ ]  CRUDL NPC's
+    - [ ]  Generate NPC's

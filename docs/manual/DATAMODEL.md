@@ -1,252 +1,291 @@
 # Data Model Planing
 
-- **world**:
-  - name
-  - system
-  - **articles**:
-    - title
-    - pronunciation
-    - content
-    - image
-    - published
-    - visibility
-    - **type**:
+# Data Model Pre-Planing (will be generated later)
+
+- Worlds
+  - [x] World
+    - Properties:
+      - id
       - name
-    - **categories**:
-      - name
-- **campaigns**:
-  - name
-  - excerpt
-  - introduction
-  - coverImage
-  - **players**:
-    - firstname
-    - lastname
-    - avatar
-    - email
-    - password
-    - birthDate
-    - characters
-  - **protagonists**:
-    - player
-    - firstname
-    - lastname
-    - avatar
-    - level
-    - speed
-    - initiative
-    - hitPointsCurrent
-    - hitPointsMax
-    - **conditions**:
-      - name
-      - description
-    - **races**:
-      - name
+      - system
+    - Relations:
+      - 1-N Articles
+  - [x] Article
+    - Properties:
+      - id
+      - title
       - pronunciation
-      - subtitle
-      - description
-      - racialTraits
-      - appearance
-      - habitat
-      - peculiarities
-      - clans
-      - naming
-      - subRaces
-      - **defenses**:
-        - name
-        - description
-    - **class**:
+      - content
+      - image
+      - published
+      - visibility
+    - Relations:
+      - N-1 Worlds
+      - N-M ArticleTypes
+      - N-M Categories
+  - [x] ArticleType
+    - Properties:
+      - id
       - name
-      - pronunciation
-      - description
-      - primaryAbility
-      - saveThrows
-      - peculiarities
-      - creationRules
-      - **feature**:
-        - name
-        - level
-        - description
-      - hitDice
-      - hitPointsStart
-      - hitPointsLater
-      - **proficiencies**:
-        - armor
-        - weapons
-        - tools
-        - savingThrows
-        - **skills**:
-          - name
-        - **equipment**:
-          - armor
-          - weapons
-          - tools
-    - **abilityScores**:
+    - Relations:
+      - N-M Articles
+  - [x] Category
+    - Properties:
+      - id
       - name
-      - baseScore
-      - racialBonus
-      - abilityImprovement
-      - miscBonus
-      - modifier
-      - setScore
-      - otherModifier
-      - overrideScore
-    - **background**:
+    - Relations:
+      - N-M Articles
+- Campaigns
+  - [ ] Campaign
+    - Properties:
       - name
-      - skillProficiencies
-      - **languages**:
-        - name
-        - rarity
-      - **backgroundFeature**:
+      - excerpt
+      - introduction
+      - coverImage
+    - Relations:
+      - N-M Users (Players)
+      - N-M Characters (Protagonists)
+      - N-M NPC's
+      - N-M Plots
+      - N-M Sessions
+      - N-M Primers (Articles)
+  - Encounters
+    - [x] Encounter
+      - Properties:
+        - id
+        - setting
+        - description
+        - objective
+      - Relations:
+        - N-M NPC
+        - N-M Obstacles
+        - N-M Consequence
+        - N-M Tactic
+        - N-M Item
+        - N-M Monster
+        - N-M Plots
+    - [x] Consequence
+      - Properties:
+        - id
         - name
         - description
-      - **alignment**:
+      - Relations:
+        - N-M Encounter
+    - [x] Obstacle
+      - Properties:
+        - id
         - name
         - description
-      - faith
-      - **lifestyle**:
+        - pronunciation
+      - Relations:
+        - N-M Encounter
+    - [x] Tactic
+      - Properties:
+        - id
         - name
         - description
-        - gold
-      - hair
-      - skin
-      - eyes
-      - height
-      - weight
-      - age
-      - gender
-      - personalityTraits
-      - ideals
-      - bonds
-      - flaws
-      - organizations
-      - allies
-      - enemies
-      - backstory
-      - notes
-      - **equipment**:
-        - primaryWeapon
-        - secondaryWeapon
-        - armor
-    - **inventory**:
-      - equipment
-      - backpack
-      - chest
-      - attunement
-      - otherPossessions
-  - **npcs**:
-    - firstname
-    - lastname
-    - avatar
-    - race
-    - class
-    - alignment
-    - background
-    - appearance
-    - personality
-    - backstory
-    - role
-    - ability
-    - **equipment**:
-      - **item**
-        - name
-        - **type**:
-          - name
-        - **category**:
-          - name
-        - description
-        - quantity
-        - weight
-        - capacity
-        - cost
-      - **weapon**:
-        - *see item*
-        - proficient
-        - attackType
-        - reach
-        - damage
-        - damageType
-        - **properties**:
-          - name
-      - **armor**:
-        - *see item*
-        - armorClass
-        - weight
-    - notes
-    - adversary (Ally Competitor Generic NPC Neutral Party Protagonist)
-    - visibility (true false)
-    - article
-    - current location
-    - honorific
-    - nickname
-  - **plots**:
-    - title
-    - pronunciation
-    - content
-    - objective
-    - theme
-    - plot type (Thwarting Delivering Collecting Discovering)
-    - focus (Master Plot Character Plot other)
-    - adversary type (Nemesis Villain Henchmen)
-    - expectations
-    - learn factors
-    - nameList
-    - changesToMasterPlot
-    - goal
-    - **encounters**:
-      - setting
-      - description
-      - objective
-      - **enemies**:
+      - Relations:
+        - N-M Encounter
+  - Monsters
+    - [x] Monster
+      - Properties:
+        - id
         - name
         - type
         - subtype
         - size
         - environment
-        - alignment
         - description
         - armorClass
         - hitPoints
-        - movementRate
-        - movementRateAdditional
-        - abilities
-        - skills
-        - senses
-        - languages
-        - **difficulty**:
-          - level
-          - experience
-        - features
-        - **actions**:
-          - name
-          - type
-          - description
-          - rarity
-        - **legendaryActions**:
-          - *see actions*
+        - currentHitPoints
+        - movementRatePrimary
+        - movementRateSecondary
         - lair
         - resistance
         - damageImmunity
         - conditionImmunity
         - vulnerability
-        - loot
-      - allies
-      - obstacles
-      - tactics
-      - rewards
-      - consequences
-    - situation
-    - journey
-    - first attempt
-    - false ending
-    - showdown
-  - **sessions**:
-    - title
-    - excerpt
-    - date & time
-    - primary plot
-    - estimated duration
-    - location
-    - chat url
-  - **primers**:
-    - *articles*
+      - Relations:
+        - N-M Alignment
+        - N-M Abilities
+        - N-M Sense
+        - N-M Language
+        - N-M Feature
+        - N-M Item
+        - N-M Difficulty
+        - N-M Action
+        - N-M Encounter
+    - [x] Action
+      - Properties:
+        - id
+        - name
+        - type
+        - description
+        - rarity
+      - Relations:
+        - N-M Monster
+    - [x] Difficulty
+      - Properties:
+        - id
+        - name
+        - level
+        - experience
+      - Relations:
+        - N-M Monster
+    - [x] Sense
+      - Properties:
+        - id
+        - name
+        - description
+      - Relations:
+        - N-M Monster
+  - Plots
+    - [x] Plot
+      - Properties:
+        - id
+        - title
+        - pronunciation
+        - content
+        - objective
+        - focus
+        - expectations
+        - learning
+        - masterPlotChange
+        - goal
+        - situation
+        - journey
+        - firstAttempt
+        - falseEnding
+        - climax
+      - Relations:
+        - N-M Theme
+        - N-M PlotType
+        - N-M CharacterType
+        - N-M Encounter
+        - N-M Campaign
+    - [x] PlotType
+      - Properties:
+        - id
+        - name
+        - description
+      - Relations:
+        - N-M Plot
+    - [x] Theme
+      - Properties:
+        - id
+        - name
+        - description
+      - Relations:
+        - N-1 Plot
+    - [ ] Locations
+      - Properties:
+        - id
+        - name
+        - description
+      - Relations
+        - N-M Plot
+  - Sessions
+    - [ ] Session
+      - Properties:
+        - title
+        - excerpt
+        - date & time
+        - primary plot
+        - estimated duration
+        - chat url
+      - Relations:
+        - N-M Note
+        - 1-1 Session Log
+        - N-M Campaign
+    - [ ] SessionLog
+      - Properties:
+        - name
+        - date
+      - Relations:
+        - 1-1 Session
+        - 1-N Entry
+    - [ ] Entry
+      - Properties:
+        - title
+        - short
+        - content
+        - timestamp
+      - Relations:
+        - N-1 Session Log
+    - [ ] Note
+      - Properties:
+        - title
+        - content
+        - timestamp
+      - Relations:
+        - N-M Session
+    - [ ] Session Location
+      - Properties:
+        - name
+        - street
+        - housenumber
+        - postalcode
+        - city
+      - Relations:
+        - 1-1 Session
+- Characters
+  - [ ] Character
+    - Properties:
+    - Relations:
+  - [ ] Alignment
+    - Properties:
+    - Relations:
+  - [ ] Ability
+    - Properties:
+    - Relations:
+  - [ ] Background
+    - Properties:
+    - Relations:
+  - [ ] Class
+    - Properties:
+    - Relations:
+  - [ ] Condition
+    - Properties:
+    - Relations:
+  - [ ] Defense
+    - Properties:
+    - Relations:
+  - [ ] Feature
+    - Properties:
+    - Relations:
+  - [ ] Language
+    - Properties:
+    - Relations:
+  - [ ] Lifestyle
+    - Properties:
+    - Relations:
+  - [ ] Proficiency
+    - Properties:
+    - Relations:
+  - [ ] Race
+    - Properties:
+    - Relations:
+  - [ ] Skill
+    - Properties:
+    - Relations:
+  - [ ] Inventory
+    - Properties:
+    - Relations:
+  - [ ] Equipment
+    - Properties:
+    - Relations:
+- Items
+  - [ ] Item
+    - Properties:
+    - Relations:
+  - [ ] ItemType
+    - Properties:
+    - Relations:
+  - [ ] ItemCategory
+    - Properties:
+    - Relations:
+- NPC
+  - [ ] NPC
+    - Properties:
+    - Relations:
