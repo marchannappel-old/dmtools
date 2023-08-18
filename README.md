@@ -179,6 +179,19 @@ Insert gif or link to demo
       - [ ]  Generate NPC's
     - [ ]  Items:
       - [ ]  Generate Items
+- [ ]  **Release 1.2.0**:
+  - [ ]  Frontend:
+    - [ ]  Landing Page
+    - [ ]  Dashboard Page
+      - [ ]  Article Count Component
+      - [ ]  Dashboard Actions Component
+      - [ ]  Hierarchy Component
+    - [ ]  View World Page
+    - [ ]  Article Page
+    - [ ]  Maps Page
+    - [ ]  Image Page
+    - [ ]  Campaign Page
+
 
 ## Documentation
 

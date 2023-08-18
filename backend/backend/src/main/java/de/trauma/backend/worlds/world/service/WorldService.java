@@ -41,6 +41,8 @@ public class WorldService {
             World existingWorld = existingWorldCheck.get();
             existingWorld.setName(world.getName());
             existingWorld.setSystem(world.getSystem());
+            existingWorld.setArticles(world.getArticles());
+            existingWorld.setCampaigns(world.getCampaigns());
 
             return new World(this.worldRepository.save(new WorldEntity(existingWorld)));
         }

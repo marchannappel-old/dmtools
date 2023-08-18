@@ -3,6 +3,9 @@ package de.trauma.backend.campaigns.plots.plot.domain;
 import de.trauma.backend.campaigns.campaign.domain.Campaign;
 import de.trauma.backend.campaigns.encounters.encounter.domain.Encounter;
 import de.trauma.backend.campaigns.plots.plot.repository.PlotEntity;
+import de.trauma.backend.campaigns.plots.plottype.domain.PlotType;
+import de.trauma.backend.campaigns.plots.theme.domain.Theme;
+import de.trauma.backend.characters.charactertype.domain.CharacterType;
 
 import java.util.List;
 

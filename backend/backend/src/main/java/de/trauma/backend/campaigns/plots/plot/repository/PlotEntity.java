@@ -5,6 +5,7 @@ import de.trauma.backend.campaigns.encounters.encounter.repository.EncounterEnti
 import de.trauma.backend.campaigns.plots.plot.domain.Plot;
 import de.trauma.backend.campaigns.plots.theme.repository.ThemeEntity;
 import de.trauma.backend.campaigns.plots.plottype.repository.PlotTypeEntity;
+import de.trauma.backend.characters.charactertype.repository.CharacterTypeEntity;
 
 import javax.persistence.*;
 import java.util.List;
