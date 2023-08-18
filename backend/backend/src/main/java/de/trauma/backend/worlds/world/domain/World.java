@@ -3,6 +3,7 @@ package de.trauma.backend.worlds.world.domain;
 import de.trauma.backend.campaigns.campaign.domain.Campaign;
 import de.trauma.backend.worlds.articles.article.domain.Article;
 import de.trauma.backend.worlds.meta.domain.Meta;
+import de.trauma.backend.worlds.settings.domain.Settings;
 import de.trauma.backend.worlds.world.repository.WorldEntity;
 import lombok.Getter;
 import lombok.Setter;
@@ -18,6 +19,7 @@ public class World {
     private List<Article> articles;
     private List<Campaign> campaigns;
     private Meta meta;
+    private Settings settings;
 
     public World(WorldEntity entity) {
         this.id = entity.getId();
@@ -26,5 +28,6 @@ public class World {
         this.articles = entity.getArticles().stream().map(Article::new).toList();
         this.campaigns = entity.getCampaigns().stream().map(Campaign::new).toList();
         this.meta = new Meta(entity.getMeta());
+        this.settings = new Settings(entity.getSettings());
     }
 }

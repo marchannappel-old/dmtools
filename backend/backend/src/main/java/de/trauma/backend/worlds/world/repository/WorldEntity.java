@@ -3,6 +3,7 @@ package de.trauma.backend.worlds.world.repository;
 import de.trauma.backend.campaigns.campaign.repository.CampaignEntity;
 import de.trauma.backend.worlds.articles.article.repository.ArticleEntity;
 import de.trauma.backend.worlds.meta.repository.MetaEntity;
+import de.trauma.backend.worlds.settings.repository.SettingsEntity;
 import de.trauma.backend.worlds.world.domain.World;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -42,6 +43,10 @@ public class WorldEntity {
     @JoinColumn(name = "meta_id")
     private MetaEntity meta;
 
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "settings_id")
+    private SettingsEntity settings;
+
     public WorldEntity(World world) {
         this.id = world.getId();
         this.name = world.getName();
@@ -49,5 +54,6 @@ public class WorldEntity {
         this.articles = world.getArticles().stream().map(ArticleEntity::new).toList();
         this.campaigns = world.getCampaigns().stream().map(CampaignEntity::new).toList();
         this.meta = new MetaEntity(world.getMeta());
+        this.settings = new SettingsEntity(world.getSettings());
     }
 }
