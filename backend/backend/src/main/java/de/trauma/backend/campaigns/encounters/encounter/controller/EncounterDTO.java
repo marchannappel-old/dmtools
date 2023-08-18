@@ -8,9 +8,11 @@ import de.trauma.backend.campaigns.monsters.monster.controller.MonsterDTO;
 import de.trauma.backend.campaigns.plots.plot.controller.PlotDTO;
 import de.trauma.backend.characters.item.controller.ItemDTO;
 import de.trauma.backend.characters.npc.controller.NpcDTO;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class EncounterDTO {
     private final Long id;
     private final String setting;
@@ -36,49 +38,5 @@ public class EncounterDTO {
         this.consequences = encounter.getConsequences().stream().map(ConsequenceDTO::new).toList();
         this.monsters = encounter.getMonsters().stream().map(MonsterDTO::new).toList();
         this.plots = encounter.getPlots().stream().map(PlotDTO::new).toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getSetting() {
-        return setting;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getObjective() {
-        return objective;
-    }
-
-    public List<NpcDTO> getAllies() {
-        return allies;
-    }
-
-    public List<ObstacleDTO> getObstacles() {
-        return obstacles;
-    }
-
-    public List<TacticDTO> getTactics() {
-        return tactics;
-    }
-
-    public List<ItemDTO> getRewards() {
-        return rewards;
-    }
-
-    public List<ConsequenceDTO> getConsequences() {
-        return consequences;
-    }
-
-    public List<MonsterDTO> getMonsters() {
-        return monsters;
-    }
-
-    public List<PlotDTO> getPlots() {
-        return plots;
     }
 }

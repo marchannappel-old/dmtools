@@ -2,9 +2,13 @@ package de.trauma.backend.campaigns.monsters.difficulty.domain;
 
 import de.trauma.backend.campaigns.monsters.monster.domain.Monster;
 import de.trauma.backend.campaigns.monsters.difficulty.repository.DifficultyEntity;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
+@Getter
+@Setter
 public class Difficulty {
     private Long id;
     private String name;
@@ -21,45 +25,5 @@ public class Difficulty {
                 .stream()
                 .map(Monster::new)
                 .toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
-    public int getExperience() {
-        return experience;
-    }
-
-    public void setExperience(int experience) {
-        this.experience = experience;
-    }
-
-    public List<Monster> getMonsters() {
-        return monsters;
-    }
-
-    public void setMonsters(List<Monster> monsters) {
-        this.monsters = monsters;
     }
 }

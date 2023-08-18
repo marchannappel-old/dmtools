@@ -2,9 +2,11 @@ package de.trauma.backend.campaigns.encounters.consequence.controller;
 
 import de.trauma.backend.campaigns.encounters.consequence.domain.Consequence;
 import de.trauma.backend.campaigns.encounters.encounter.controller.EncounterDTO;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class ConsequenceDTO {
     private final Long id;
     private final String name;
@@ -16,21 +18,5 @@ public class ConsequenceDTO {
         this.name = consequence.getName();
         this.description = consequence.getDescription();
         this.encounters = consequence.getEncounters().stream().map(EncounterDTO::new).toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public List<EncounterDTO> getEncounters() {
-        return encounters;
     }
 }

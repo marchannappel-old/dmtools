@@ -6,12 +6,18 @@ import de.trauma.backend.campaigns.plots.plot.domain.Plot;
 import de.trauma.backend.campaigns.plots.theme.repository.ThemeEntity;
 import de.trauma.backend.campaigns.plots.plottype.repository.PlotTypeEntity;
 import de.trauma.backend.characters.charactertype.repository.CharacterTypeEntity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table
+@Getter
+@Setter
+@NoArgsConstructor
 public class PlotEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -94,9 +100,6 @@ public class PlotEntity {
     @ManyToMany(mappedBy = "plots")
     private List<CampaignEntity> campaigns;
 
-    public PlotEntity() {
-    }
-
     public PlotEntity(Plot plot) {
         this.id = plot.getId();
         this.title = plot.getTitle();
@@ -118,165 +121,5 @@ public class PlotEntity {
         this.adversaryType = plot.getAdversaryType().stream().map(CharacterTypeEntity::new).toList();
         this.encounters = plot.getEncounters().stream().map(EncounterEntity::new).toList();
         this.campaigns = plot.getPlotType().stream().map(CampaignEntity::new).toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public String getPronunciation() {
-        return pronunciation;
-    }
-
-    public void setPronunciation(String pronunciation) {
-        this.pronunciation = pronunciation;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public void setContent(String content) {
-        this.content = content;
-    }
-
-    public String getObjective() {
-        return objective;
-    }
-
-    public void setObjective(String objective) {
-        this.objective = objective;
-    }
-
-    public String getFocus() {
-        return focus;
-    }
-
-    public void setFocus(String focus) {
-        this.focus = focus;
-    }
-
-    public String getExpectations() {
-        return expectations;
-    }
-
-    public void setExpectations(String expectations) {
-        this.expectations = expectations;
-    }
-
-    public String getLearning() {
-        return learning;
-    }
-
-    public void setLearning(String learning) {
-        this.learning = learning;
-    }
-
-    public String getMasterPlotChanges() {
-        return masterPlotChanges;
-    }
-
-    public void setMasterPlotChanges(String masterPlotChanges) {
-        this.masterPlotChanges = masterPlotChanges;
-    }
-
-    public String getGoal() {
-        return goal;
-    }
-
-    public void setGoal(String goal) {
-        this.goal = goal;
-    }
-
-    public String getSituation() {
-        return situation;
-    }
-
-    public void setSituation(String situation) {
-        this.situation = situation;
-    }
-
-    public String getJourney() {
-        return journey;
-    }
-
-    public void setJourney(String journey) {
-        this.journey = journey;
-    }
-
-    public String getFirstAttempt() {
-        return firstAttempt;
-    }
-
-    public void setFirstAttempt(String firstAttempt) {
-        this.firstAttempt = firstAttempt;
-    }
-
-    public String getFalseEnding() {
-        return falseEnding;
-    }
-
-    public void setFalseEnding(String falseEnding) {
-        this.falseEnding = falseEnding;
-    }
-
-    public String getClimax() {
-        return climax;
-    }
-
-    public void setClimax(String climax) {
-        this.climax = climax;
-    }
-
-    public List<ThemeEntity> getTheme() {
-        return theme;
-    }
-
-    public void setTheme(List<ThemeEntity> theme) {
-        this.theme = theme;
-    }
-
-    public List<PlotTypeEntity> getPlotType() {
-        return plotType;
-    }
-
-    public void setPlotType(List<PlotTypeEntity> plotType) {
-        this.plotType = plotType;
-    }
-
-    public List<CharacterTypeEntity> getAdversaryType() {
-        return adversaryType;
-    }
-
-    public void setAdversaryType(List<CharacterTypeEntity> adversaryType) {
-        this.adversaryType = adversaryType;
-    }
-
-    public List<EncounterEntity> getEncounters() {
-        return encounters;
-    }
-
-    public void setEncounters(List<EncounterEntity> encounters) {
-        this.encounters = encounters;
-    }
-
-    public List<CampaignEntity> getCampaigns() {
-        return campaigns;
-    }
-
-    public void setCampaigns(List<CampaignEntity> campaigns) {
-        this.campaigns = campaigns;
     }
 }

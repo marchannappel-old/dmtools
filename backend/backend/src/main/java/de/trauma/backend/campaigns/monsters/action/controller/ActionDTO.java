@@ -2,9 +2,11 @@ package de.trauma.backend.campaigns.monsters.action.controller;
 
 import de.trauma.backend.campaigns.monsters.action.domain.Action;
 import de.trauma.backend.campaigns.monsters.monster.controller.MonsterDTO;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class ActionDTO {
     private final Long id;
     private final String name;
@@ -23,29 +25,5 @@ public class ActionDTO {
                 .stream()
                 .map(MonsterDTO::new)
                 .toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getRarity() {
-        return rarity;
-    }
-
-    public List<MonsterDTO> getMonsters() {
-        return monsters;
     }
 }

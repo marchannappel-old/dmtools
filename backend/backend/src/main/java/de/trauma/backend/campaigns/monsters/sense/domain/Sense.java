@@ -2,9 +2,13 @@ package de.trauma.backend.campaigns.monsters.sense.domain;
 
 import de.trauma.backend.campaigns.monsters.monster.domain.Monster;
 import de.trauma.backend.campaigns.monsters.sense.repository.SenseEntity;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.util.List;
 
+@Getter
+@Setter
 public class Sense {
     private Long id;
     private String name;
@@ -19,37 +23,5 @@ public class Sense {
                 .stream()
                 .map(Monster::new)
                 .toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public List<Monster> getMonsters() {
-        return monsters;
-    }
-
-    public void setMonsters(List<Monster> monsters) {
-        this.monsters = monsters;
     }
 }

@@ -4,9 +4,11 @@ import de.trauma.backend.worlds.articles.article.domain.Article;
 import de.trauma.backend.worlds.articles.articletype.domain.ArticleType;
 import de.trauma.backend.worlds.articles.category.domain.Category;
 import de.trauma.backend.worlds.world.domain.World;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class ArticleDTO {
     private final Long id;
     private final String title;
@@ -26,37 +28,5 @@ public class ArticleDTO {
         this.world = article.getWorld();
         this.type = article.getType();
         this.categories = article.getCategories();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getPronunciation() {
-        return pronunciation;
-    }
-
-    public String getContent() {
-        return content;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public World getWorld() {
-        return world;
-    }
-
-    public ArticleType getType() {
-        return type;
-    }
-
-    public List<Category> getCategories() {
-        return categories;
     }
 }

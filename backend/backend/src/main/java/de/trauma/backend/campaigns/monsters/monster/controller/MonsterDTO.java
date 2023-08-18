@@ -10,9 +10,11 @@ import de.trauma.backend.characters.alignment.controller.AlignmentDTO;
 import de.trauma.backend.characters.feature.controller.FeatureDTO;
 import de.trauma.backend.characters.item.controller.ItemDTO;
 import de.trauma.backend.characters.languages.controller.LanguageDTO;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class MonsterDTO {
     private final Long id;
     private final String name;
@@ -68,109 +70,5 @@ public class MonsterDTO {
         this.difficulties = monster.getDifficulties().stream().map(DifficultyDTO::new).toList();
         this.actions = monster.getActions().stream().map(ActionDTO::new).toList();
         this.encounters = monster.getEncounters().stream().map(EncounterDTO::new).toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public String getSubtype() {
-        return subtype;
-    }
-
-    public int getSize() {
-        return size;
-    }
-
-    public String getEnvironment() {
-        return environment;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public int getArmorClass() {
-        return armorClass;
-    }
-
-    public int getHitPoints() {
-        return hitPoints;
-    }
-
-    public int getCurrentHitPoints() {
-        return currentHitPoints;
-    }
-
-    public int getMovementRatePrimary() {
-        return movementRatePrimary;
-    }
-
-    public int getMovementRateSecondary() {
-        return movementRateSecondary;
-    }
-
-    public String getLair() {
-        return lair;
-    }
-
-    public String getResistance() {
-        return resistance;
-    }
-
-    public String getDamageImmunity() {
-        return damageImmunity;
-    }
-
-    public String getConditionImmunity() {
-        return conditionImmunity;
-    }
-
-    public String getVulnerability() {
-        return vulnerability;
-    }
-
-    public List<AlignmentDTO> getAlignments() {
-        return alignments;
-    }
-
-    public List<AbilityDTO> getAbilities() {
-        return abilities;
-    }
-
-    public List<SenseDTO> getSenses() {
-        return senses;
-    }
-
-    public List<LanguageDTO> getLanguages() {
-        return languages;
-    }
-
-    public List<FeatureDTO> getFeatures() {
-        return features;
-    }
-
-    public List<ItemDTO> getLoot() {
-        return loot;
-    }
-
-    public List<DifficultyDTO> getDifficulties() {
-        return difficulties;
-    }
-
-    public List<ActionDTO> getActions() {
-        return actions;
-    }
-
-    public List<EncounterDTO> getEncounters() {
-        return encounters;
     }
 }

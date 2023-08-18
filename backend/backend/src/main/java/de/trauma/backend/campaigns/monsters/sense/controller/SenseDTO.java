@@ -2,9 +2,11 @@ package de.trauma.backend.campaigns.monsters.sense.controller;
 
 import de.trauma.backend.campaigns.monsters.monster.controller.MonsterDTO;
 import de.trauma.backend.campaigns.monsters.sense.domain.Sense;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class SenseDTO {
     private final Long id;
     private final String name;
@@ -19,21 +21,5 @@ public class SenseDTO {
                 .stream()
                 .map(MonsterDTO::new)
                 .toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public List<MonsterDTO> getMonsters() {
-        return monsters;
     }
 }

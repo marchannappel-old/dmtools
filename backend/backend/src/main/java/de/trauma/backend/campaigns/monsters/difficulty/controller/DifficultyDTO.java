@@ -2,9 +2,11 @@ package de.trauma.backend.campaigns.monsters.difficulty.controller;
 
 import de.trauma.backend.campaigns.monsters.difficulty.domain.Difficulty;
 import de.trauma.backend.campaigns.monsters.monster.controller.MonsterDTO;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class DifficultyDTO {
     private final Long id;
     private final String name;
@@ -21,25 +23,5 @@ public class DifficultyDTO {
                 .stream()
                 .map(MonsterDTO::new)
                 .toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public int getLevel() {
-        return level;
-    }
-
-    public int getExperience() {
-        return experience;
-    }
-
-    public List<MonsterDTO> getMonsters() {
-        return monsters;
     }
 }

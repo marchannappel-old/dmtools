@@ -8,12 +8,18 @@ import de.trauma.backend.campaigns.monsters.monster.repository.MonsterEntity;
 import de.trauma.backend.campaigns.plots.plot.repository.PlotEntity;
 import de.trauma.backend.characters.item.repository.ItemEntity;
 import de.trauma.backend.characters.npc.repository.NpcEntity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table
+@Getter
+@Setter
+@NoArgsConstructor
 public class EncounterEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -79,9 +85,6 @@ public class EncounterEntity {
     @ManyToMany(mappedBy = "encounters")
     private List<PlotEntity> plots;
 
-    public EncounterEntity() {
-    }
-
     public EncounterEntity(Encounter encounter) {
         this.id = encounter.getId();
         this.setting = encounter.getSetting();
@@ -94,93 +97,5 @@ public class EncounterEntity {
         this.consequences = encounter.getConsequences().stream().map(ConsequenceEntity::new).toList();
         this.monsters = encounter.getMonsters().stream().map(MonsterEntity::new).toList();
         this.plots = encounter.getPlots().stream().map(PlotEntity::new).toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getSetting() {
-        return setting;
-    }
-
-    public void setSetting(String setting) {
-        this.setting = setting;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getObjective() {
-        return objective;
-    }
-
-    public void setObjective(String objective) {
-        this.objective = objective;
-    }
-
-    public List<NpcEntity> getAllies() {
-        return allies;
-    }
-
-    public void setAllies(List<NpcEntity> allies) {
-        this.allies = allies;
-    }
-
-    public List<ObstacleEntity> getObstacles() {
-        return obstacles;
-    }
-
-    public void setObstacles(List<ObstacleEntity> obstacles) {
-        this.obstacles = obstacles;
-    }
-
-    public List<TacticEntity> getTactics() {
-        return tactics;
-    }
-
-    public void setTactics(List<TacticEntity> tactics) {
-        this.tactics = tactics;
-    }
-
-    public List<ItemEntity> getRewards() {
-        return rewards;
-    }
-
-    public void setRewards(List<ItemEntity> rewards) {
-        this.rewards = rewards;
-    }
-
-    public List<ConsequenceEntity> getConsequences() {
-        return consequences;
-    }
-
-    public void setConsequences(List<ConsequenceEntity> consequences) {
-        this.consequences = consequences;
-    }
-
-    public List<MonsterEntity> getMonsters() {
-        return monsters;
-    }
-
-    public void setMonsters(List<MonsterEntity> monsters) {
-        this.monsters = monsters;
-    }
-
-    public List<PlotEntity> getPlots() {
-        return plots;
-    }
-
-    public void setPlots(List<PlotEntity> plots) {
-        this.plots = plots;
     }
 }

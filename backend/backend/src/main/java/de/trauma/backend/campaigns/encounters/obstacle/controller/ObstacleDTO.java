@@ -2,9 +2,11 @@ package de.trauma.backend.campaigns.encounters.obstacle.controller;
 
 import de.trauma.backend.campaigns.encounters.encounter.controller.EncounterDTO;
 import de.trauma.backend.campaigns.encounters.obstacle.domain.Obstacle;
+import lombok.Getter;
 
 import java.util.List;
 
+@Getter
 public class ObstacleDTO {
     private final Long id;
     private final String name;
@@ -18,25 +20,5 @@ public class ObstacleDTO {
         this.description = obstacle.getDescription();
         this.pronunciation = obstacle.getPronunciation();
         this.encounters = obstacle.getEncounters().stream().map(EncounterDTO::new).toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public String getPronunciation() {
-        return pronunciation;
-    }
-
-    public List<EncounterDTO> getEncounters() {
-        return encounters;
     }
 }

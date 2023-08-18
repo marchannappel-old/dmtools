@@ -2,12 +2,18 @@ package de.trauma.backend.campaigns.monsters.action.repository;
 
 import de.trauma.backend.campaigns.monsters.action.domain.Action;
 import de.trauma.backend.campaigns.monsters.monster.repository.MonsterEntity;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 import java.util.List;
 
 @Entity
 @Table
+@Getter
+@Setter
+@NoArgsConstructor
 public class ActionEntity {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,9 +34,6 @@ public class ActionEntity {
     @ManyToMany(mappedBy = "actions")
     private List<MonsterEntity> monsters;
 
-    public ActionEntity() {
-    }
-
     public ActionEntity(Action action) {
         this.id = action.getId();
         this.name = action.getName();
@@ -41,53 +44,5 @@ public class ActionEntity {
                 .stream()
                 .map(MonsterEntity::new)
                 .toList();
-    }
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getRarity() {
-        return rarity;
-    }
-
-    public void setRarity(String rarity) {
-        this.rarity = rarity;
-    }
-
-    public List<MonsterEntity> getMonsters() {
-        return monsters;
-    }
-
-    public void setMonsters(List<MonsterEntity> monsters) {
-        this.monsters = monsters;
     }
 }
