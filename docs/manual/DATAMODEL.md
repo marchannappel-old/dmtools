@@ -1,0 +1,291 @@
+# Data Model Planing
+
+# Data Model Pre-Planing (will be generated later)
+
+- Worlds
+  - [x] World
+    - Properties:
+      - id
+      - name
+      - system
+    - Relations:
+      - 1-N Articles
+  - [x] Article
+    - Properties:
+      - id
+      - title
+      - pronunciation
+      - content
+      - image
+      - published
+      - visibility
+    - Relations:
+      - N-1 Worlds
+      - N-M ArticleTypes
+      - N-M Categories
+  - [x] ArticleType
+    - Properties:
+      - id
+      - name
+    - Relations:
+      - N-M Articles
+  - [x] Category
+    - Properties:
+      - id
+      - name
+    - Relations:
+      - N-M Articles
+- Campaigns
+  - [ ] Campaign
+    - Properties:
+      - name
+      - excerpt
+      - introduction
+      - coverImage
+    - Relations:
+      - N-M Users (Players)
+      - N-M Characters (Protagonists)
+      - N-M NPC's
+      - N-M Plots
+      - N-M Sessions
+      - N-M Primers (Articles)
+  - Encounters
+    - [x] Encounter
+      - Properties:
+        - id
+        - setting
+        - description
+        - objective
+      - Relations:
+        - N-M NPC
+        - N-M Obstacles
+        - N-M Consequence
+        - N-M Tactic
+        - N-M Item
+        - N-M Monster
+        - N-M Plots
+    - [x] Consequence
+      - Properties:
+        - id
+        - name
+        - description
+      - Relations:
+        - N-M Encounter
+    - [x] Obstacle
+      - Properties:
+        - id
+        - name
+        - description
+        - pronunciation
+      - Relations:
+        - N-M Encounter
+    - [x] Tactic
+      - Properties:
+        - id
+        - name
+        - description
+      - Relations:
+        - N-M Encounter
+  - Monsters
+    - [x] Monster
+      - Properties:
+        - id
+        - name
+        - type
+        - subtype
+        - size
+        - environment
+        - description
+        - armorClass
+        - hitPoints
+        - currentHitPoints
+        - movementRatePrimary
+        - movementRateSecondary
+        - lair
+        - resistance
+        - damageImmunity
+        - conditionImmunity
+        - vulnerability
+      - Relations:
+        - N-M Alignment
+        - N-M Abilities
+        - N-M Sense
+        - N-M Language
+        - N-M Feature
+        - N-M Item
+        - N-M Difficulty
+        - N-M Action
+        - N-M Encounter
+    - [x] Action
+      - Properties:
+        - id
+        - name
+        - type
+        - description
+        - rarity
+      - Relations:
+        - N-M Monster
+    - [x] Difficulty
+      - Properties:
+        - id
+        - name
+        - level
+        - experience
+      - Relations:
+        - N-M Monster
+    - [x] Sense
+      - Properties:
+        - id
+        - name
+        - description
+      - Relations:
+        - N-M Monster
+  - Plots
+    - [x] Plot
+      - Properties:
+        - id
+        - title
+        - pronunciation
+        - content
+        - objective
+        - focus
+        - expectations
+        - learning
+        - masterPlotChange
+        - goal
+        - situation
+        - journey
+        - firstAttempt
+        - falseEnding
+        - climax
+      - Relations:
+        - N-M Theme
+        - N-M PlotType
+        - N-M CharacterType
+        - N-M Encounter
+        - N-M Campaign
+    - [x] PlotType
+      - Properties:
+        - id
+        - name
+        - description
+      - Relations:
+        - N-M Plot
+    - [x] Theme
+      - Properties:
+        - id
+        - name
+        - description
+      - Relations:
+        - N-1 Plot
+    - [ ] Locations
+      - Properties:
+        - id
+        - name
+        - description
+      - Relations
+        - N-M Plot
+  - Sessions
+    - [ ] Session
+      - Properties:
+        - title
+        - excerpt
+        - date & time
+        - primary plot
+        - estimated duration
+        - chat url
+      - Relations:
+        - N-M Note
+        - 1-1 Session Log
+        - N-M Campaign
+    - [ ] SessionLog
+      - Properties:
+        - name
+        - date
+      - Relations:
+        - 1-1 Session
+        - 1-N Entry
+    - [ ] Entry
+      - Properties:
+        - title
+        - short
+        - content
+        - timestamp
+      - Relations:
+        - N-1 Session Log
+    - [ ] Note
+      - Properties:
+        - title
+        - content
+        - timestamp
+      - Relations:
+        - N-M Session
+    - [ ] Session Location
+      - Properties:
+        - name
+        - street
+        - housenumber
+        - postalcode
+        - city
+      - Relations:
+        - 1-1 Session
+- Characters
+  - [ ] Character
+    - Properties:
+    - Relations:
+  - [ ] Alignment
+    - Properties:
+    - Relations:
+  - [ ] Ability
+    - Properties:
+    - Relations:
+  - [ ] Background
+    - Properties:
+    - Relations:
+  - [ ] Class
+    - Properties:
+    - Relations:
+  - [ ] Condition
+    - Properties:
+    - Relations:
+  - [ ] Defense
+    - Properties:
+    - Relations:
+  - [ ] Feature
+    - Properties:
+    - Relations:
+  - [ ] Language
+    - Properties:
+    - Relations:
+  - [ ] Lifestyle
+    - Properties:
+    - Relations:
+  - [ ] Proficiency
+    - Properties:
+    - Relations:
+  - [ ] Race
+    - Properties:
+    - Relations:
+  - [ ] Skill
+    - Properties:
+    - Relations:
+  - [ ] Inventory
+    - Properties:
+    - Relations:
+  - [ ] Equipment
+    - Properties:
+    - Relations:
+- Items
+  - [ ] Item
+    - Properties:
+    - Relations:
+  - [ ] ItemType
+    - Properties:
+    - Relations:
+  - [ ] ItemCategory
+    - Properties:
+    - Relations:
+- NPC
+  - [ ] NPC
+    - Properties:
+    - Relations:
