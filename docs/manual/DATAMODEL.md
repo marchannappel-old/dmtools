@@ -36,7 +36,7 @@
     - Relations:
       - N-M Articles
 - Campaigns
-  - [ ] Campaign
+  - [X] Campaign
     - Properties:
       - name
       - excerpt
@@ -233,46 +233,46 @@
   - [ ] Character
     - Properties:
     - Relations:
-  - [ ] Alignment
+  - [X] Alignment
     - Properties:
     - Relations:
-  - [ ] Ability
+  - [X] Ability
     - Properties:
     - Relations:
   - [ ] Background
     - Properties:
     - Relations:
-  - [ ] Class
+  - [X] Class
     - Properties:
     - Relations:
-  - [ ] Condition
+  - [X] Condition
     - Properties:
     - Relations:
-  - [ ] Defense
+  - [X] Defense
     - Properties:
     - Relations:
-  - [ ] Feature
+  - [X] Feature
     - Properties:
     - Relations:
-  - [ ] Language
+  - [X] Language
     - Properties:
     - Relations:
   - [ ] Lifestyle
     - Properties:
     - Relations:
-  - [ ] Proficiency
+  - [X] Proficiency
     - Properties:
     - Relations:
-  - [ ] Race
+  - [X] Race
     - Properties:
     - Relations:
-  - [ ] Skill
+  - [X] Skill
     - Properties:
     - Relations:
   - [ ] Inventory
     - Properties:
     - Relations:
-  - [ ] Equipment
+  - [X] Equipment
     - Properties:
     - Relations:
 - Items

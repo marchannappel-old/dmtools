@@ -59,18 +59,18 @@
 - [ ] Character Creation
   - [ ]  Characters
     - [ ] CRUDL Characters
-    - [ ]  CRUDL Alignments
-    - [ ]  CRUDL Abilities
+    - [X]  CRUDL Alignments
+    - [X]  CRUDL Abilities
     - [ ]  CRUDL Background
-    - [ ]  CRUDL Classes
-    - [ ]  CRUDL Conditions
-    - [ ]  CRUDL Defenses
-    - [ ]  CRUDL Features
-    - [ ]  CRUDL Languages
+    - [X]  CRUDL Classes
+    - [X]  CRUDL Conditions
+    - [X]  CRUDL Defenses
+    - [X]  CRUDL Features
+    - [X]  CRUDL Languages
     - [ ]  CRUDL Lifestyles
-    - [ ]  CRUDL Proficiencies
-    - [ ]  CRUDL Races
-    - [ ]  CRUDL Skills
+    - [X]  CRUDL Proficiencies
+    - [X]  CRUDL Races
+    - [X]  CRUDL Skills
     - [ ]  CRUDL Inventory
     - [ ]  Generate Character Names
   - [ ]  Items

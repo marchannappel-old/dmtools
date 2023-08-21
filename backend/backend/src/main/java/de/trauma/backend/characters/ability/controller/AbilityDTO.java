@@ -1,5 +1,6 @@
 package de.trauma.backend.characters.ability.controller;
 
+import de.trauma.backend.campaigns.monsters.monster.controller.MonsterDTO;
 import de.trauma.backend.characters.ability.domain.Ability;
 import de.trauma.backend.characters.character.controller.CharacterDTO;
 import de.trauma.backend.characters.characterclass.controller.CharacterClassDTO;
@@ -22,6 +23,7 @@ public class AbilityDTO {
     private final int overrideScore;
     private final List<CharacterDTO> characters;
     private final List<NpcDTO> npcs;
+    private final List<MonsterDTO> monsters;
     private final CharacterClassDTO characterClass;
 
     public AbilityDTO(Ability ability) {
@@ -37,6 +39,7 @@ public class AbilityDTO {
         this.overrideScore = ability.getOverrideScore();
         this.characters = ability.getCharacters().stream().map(CharacterDTO::new).toList();
         this.npcs = ability.getNpcs().stream().map(NpcDTO::new).toList();
+        this.monsters = ability.getMonsters().stream().map(MonsterDTO::new).toList();
         this.characterClass = new CharacterClassDTO(ability.getCharacterClass());
     }
 }

@@ -1,5 +1,6 @@
 package de.trauma.backend.characters.feature.repository;
 
+import de.trauma.backend.campaigns.monsters.monster.repository.MonsterEntity;
 import de.trauma.backend.characters.background.repository.BackgroundEntity;
 import de.trauma.backend.characters.characterclass.repository.CharacterClassEntity;
 import de.trauma.backend.characters.feature.domain.Feature;
@@ -33,6 +34,9 @@ public class FeatureEntity {
     private List<CharacterClassEntity> classes;
 
     @ManyToMany(mappedBy = "features")
+    private List<MonsterEntity> monsters;
+
+    @ManyToMany(mappedBy = "features")
     private List<BackgroundEntity> backgrounds;
 
     public FeatureEntity(Feature feature) {
@@ -41,6 +45,7 @@ public class FeatureEntity {
         this.level = feature.getLevel();
         this.description = feature.getDescription();
         this.classes = feature.getClasses().stream().map(CharacterClassEntity::new).toList();
+        this.monsters = feature.getMonsters().stream().map(MonsterEntity::new).toList();
         this.backgrounds = feature.getBackgrounds().stream().map(BackgroundEntity::new).toList();
     }
 }

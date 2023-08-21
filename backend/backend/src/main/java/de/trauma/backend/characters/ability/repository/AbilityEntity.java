@@ -1,5 +1,6 @@
 package de.trauma.backend.characters.ability.repository;
 
+import de.trauma.backend.campaigns.monsters.monster.repository.MonsterEntity;
 import de.trauma.backend.characters.ability.domain.Ability;
 import de.trauma.backend.characters.character.repository.CharacterEntity;
 import de.trauma.backend.characters.characterclass.repository.CharacterClassEntity;
@@ -54,6 +55,9 @@ public class AbilityEntity {
     @ManyToMany(mappedBy = "abilities")
     private List<NpcEntity> npcs;
 
+    @ManyToMany(mappedBy = "abilities")
+    private List<MonsterEntity> monsters;
+
     @OneToOne(mappedBy = "primaryAbility")
     private CharacterClassEntity characterClass;
 
@@ -70,6 +74,7 @@ public class AbilityEntity {
         this.overrideScore = ability.getOverrideScore();
         this.characters = ability.getCharacters().stream().map(CharacterEntity::new).toList();
         this.npcs = ability.getNpcs().stream().map(NpcEntity::new);
+        this.monsters = ability.getMonsters().stream().map(MonsterEntity::new).toList();
         this.characterClass = new CharacterClassEntity(ability.getCharacterClass());
     }
 }

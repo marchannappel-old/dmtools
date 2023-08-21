@@ -43,6 +43,7 @@ public class FeatureService {
             updatedFeature.setLevel(feature.getLevel());
             updatedFeature.setDescription(feature.getDescription());
             updatedFeature.setClasses(feature.getClasses());
+            updatedFeature.setMonsters(feature.getMonsters());
             updatedFeature.setBackgrounds(feature.getBackgrounds());
 
             return new Feature(this.featureRepository.save(new FeatureEntity(updatedFeature)));

@@ -51,6 +51,7 @@ public class AbilityService {
             updatedAbility.setOverrideScore(ability.getOverrideScore());
             updatedAbility.setCharacters(ability.getCharacters());
             updatedAbility.setNpcs(ability.getNpcs());
+            updatedAbility.setMonsters(ability.getMonsters());
             updatedAbility.setCharacterClass(ability.getCharacterClass());
 
             return new Ability(this.abilityRepository.save(new AbilityEntity(updatedAbility)));

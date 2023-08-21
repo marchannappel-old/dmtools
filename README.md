@@ -100,45 +100,45 @@ Insert gif or link to demo
       - [ ]  CRUDL LogEntry
       - [ ]  Data Model Note
       - [ ]  CRUDL Note
-    - [ ]  Campaigns:
-      - [ ]  Data Model Campaign
-      - [ ]  CRUDL Campaign
+    - [X]  Campaigns:
+      - [X]  Data Model Campaign
+      - [X]  CRUDL Campaign
   - [ ]  Character Creation:
     - [ ]  Characters:
       - [ ]  Data Model Character
       - [ ]  CRUDL Character
       - [ ]  Data Model NPC
       - [ ]  CRUDL NPC
-      - [ ]  Data Model Character Type
-      - [ ]  CRUDL Character Type
-      - [ ]  Data Model Alignment
-      - [ ]  CRUDL Alignment
-      - [ ]  Data Model Ability
-      - [ ]  CRUDL Ability
+      - [X]  Data Model Character Type
+      - [X]  CRUDL Character Type
+      - [X]  Data Model Alignment
+      - [X]  CRUDL Alignment
+      - [X]  Data Model Ability
+      - [X]  CRUDL Ability
       - [ ]  Data Model Background
       - [ ]  CRUDL Background
-      - [ ]  Data Model Class
-      - [ ]  CRUDL Class
-      - [ ]  Data Model Condition
-      - [ ]  CRUDL Condition
-      - [ ]  Data Model Defense
-      - [ ]  CRUDL Defense
-      - [ ]  Data Model Equipment
-      - [ ]  CRUDL Equipment
-      - [ ]  Data Model Feature
-      - [ ]  CRUDL Feature
+      - [X]  Data Model Class
+      - [X]  CRUDL Class
+      - [X]  Data Model Condition
+      - [X]  CRUDL Condition
+      - [X]  Data Model Defense
+      - [X]  CRUDL Defense
+      - [X]  Data Model Equipment
+      - [X]  CRUDL Equipment
+      - [X]  Data Model Feature
+      - [X]  CRUDL Feature
       - [ ]  Data Model Inventory
       - [ ]  CRUDL Inventory
-      - [ ]  Data Model Language
-      - [ ]  CRUDL Language
-      - [ ]  Data Model Lifestyle
-      - [ ]  CRUDL Lifestyle
-      - [ ]  Data Model Proficiency
-      - [ ]  CRUDL Proficiency
-      - [ ]  Data Model Race
-      - [ ]  CRUDL Race
-      - [ ]  Data Model Skill
-      - [ ]  CRUDL Skill
+      - [X]  Data Model Language
+      - [X]  CRUDL Language
+      - [X]  Data Model Lifestyle
+      - [X]  CRUDL Lifestyle
+      - [X]  Data Model Proficiency
+      - [X]  CRUDL Proficiency
+      - [X]  Data Model Race
+      - [X]  CRUDL Race
+      - [X]  Data Model Skill
+      - [X]  CRUDL Skill
     - [ ]  Items:
       - [ ]  Data Model Item
       - [ ]  CRUDL Item

@@ -1,5 +1,6 @@
 package de.trauma.backend.characters.ability.domain;
 
+import de.trauma.backend.campaigns.monsters.monster.domain.Monster;
 import de.trauma.backend.characters.ability.repository.AbilityEntity;
 import de.trauma.backend.characters.character.domain.Character;
 import de.trauma.backend.characters.characterclass.domain.CharacterClass;
@@ -24,6 +25,7 @@ public class Ability {
     private int overrideScore;
     private List<Character> characters;
     private List<Npc> npcs;
+    private List<Monster> monsters;
     private CharacterClass characterClass;
 
     public Ability(AbilityEntity ability) {
@@ -39,6 +41,7 @@ public class Ability {
         this.overrideScore = ability.getOverrideScore();
         this.characters = ability.getCharacters().stream().map(Character::new).toList();
         this.npcs = ability.getNpcs().stream().map(Npc::new).toList();
+        this.monsters = ability.getMonsters().stream().map(Monster::new).toList();
         this.characterClass = new CharacterClass(ability.getCharacterClass());
     }
 }
