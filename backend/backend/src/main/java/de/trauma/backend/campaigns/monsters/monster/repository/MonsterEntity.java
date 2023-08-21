@@ -8,7 +8,7 @@ import de.trauma.backend.campaigns.monsters.sense.repository.SenseEntity;
 import de.trauma.backend.characters.ability.repository.AbilityEntity;
 import de.trauma.backend.characters.alignment.repository.AlignmentEntity;
 import de.trauma.backend.characters.feature.repository.FeatureEntity;
-import de.trauma.backend.characters.item.repository.ItemEntity;
+import de.trauma.backend.characters.items.item.repository.ItemEntity;
 import de.trauma.backend.characters.languages.repository.LanguageEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

@@ -6,7 +6,7 @@ import de.trauma.backend.campaigns.encounters.obstacle.controller.ObstacleDTO;
 import de.trauma.backend.campaigns.encounters.tactic.controller.TacticDTO;
 import de.trauma.backend.campaigns.monsters.monster.controller.MonsterDTO;
 import de.trauma.backend.campaigns.plots.plot.controller.PlotDTO;
-import de.trauma.backend.characters.item.controller.ItemDTO;
+import de.trauma.backend.characters.items.item.controller.ItemDTO;
 import de.trauma.backend.characters.npc.controller.NpcDTO;
 import lombok.Getter;
 

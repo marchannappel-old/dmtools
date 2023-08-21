@@ -1,7 +1,7 @@
 package de.trauma.backend.characters.equipment.domain;
 
 import de.trauma.backend.characters.equipment.repository.EquipmentEntity;
-import de.trauma.backend.characters.item.domain.Item;
+import de.trauma.backend.characters.items.item.domain.Item;
 import de.trauma.backend.characters.proficiency.domain.Proficiency;
 import lombok.Getter;
 import lombok.Setter;

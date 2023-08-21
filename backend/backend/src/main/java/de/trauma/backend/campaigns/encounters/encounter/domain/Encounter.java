@@ -6,14 +6,11 @@ import de.trauma.backend.campaigns.encounters.obstacle.domain.Obstacle;
 import de.trauma.backend.campaigns.encounters.tactic.domain.Tactic;
 import de.trauma.backend.campaigns.monsters.monster.domain.Monster;
 import de.trauma.backend.campaigns.plots.plot.domain.Plot;
-import de.trauma.backend.characters.item.domain.Item;
+import de.trauma.backend.characters.items.item.domain.Item;
 import de.trauma.backend.characters.npc.domain.Npc;
 import lombok.Getter;
 import lombok.Setter;
 
-import javax.persistence.JoinColumn;
-import javax.persistence.JoinTable;
-import javax.persistence.ManyToMany;
 import java.util.List;
 
 @Getter

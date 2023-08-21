@@ -1,7 +1,7 @@
 package de.trauma.backend.characters.equipment.controller;
 
 import de.trauma.backend.characters.equipment.domain.Equipment;
-import de.trauma.backend.characters.item.controller.ItemDTO;
+import de.trauma.backend.characters.items.item.controller.ItemDTO;
 import de.trauma.backend.characters.proficiency.controller.ProficiencyDTO;
 import lombok.Getter;
 

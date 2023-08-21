@@ -6,7 +6,7 @@ import de.trauma.backend.campaigns.encounters.obstacle.repository.ObstacleEntity
 import de.trauma.backend.campaigns.encounters.tactic.repository.TacticEntity;
 import de.trauma.backend.campaigns.monsters.monster.repository.MonsterEntity;
 import de.trauma.backend.campaigns.plots.plot.repository.PlotEntity;
-import de.trauma.backend.characters.item.repository.ItemEntity;
+import de.trauma.backend.characters.items.item.repository.ItemEntity;
 import de.trauma.backend.characters.npc.repository.NpcEntity;
 import lombok.Getter;
 import lombok.NoArgsConstructor;

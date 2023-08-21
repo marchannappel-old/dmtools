@@ -8,7 +8,7 @@ import de.trauma.backend.campaigns.monsters.sense.controller.SenseDTO;
 import de.trauma.backend.characters.ability.controller.AbilityDTO;
 import de.trauma.backend.characters.alignment.controller.AlignmentDTO;
 import de.trauma.backend.characters.feature.controller.FeatureDTO;
-import de.trauma.backend.characters.item.controller.ItemDTO;
+import de.trauma.backend.characters.items.item.controller.ItemDTO;
 import de.trauma.backend.characters.languages.controller.LanguageDTO;
 import lombok.Getter;
 

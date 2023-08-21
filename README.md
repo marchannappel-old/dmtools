@@ -115,8 +115,8 @@ Insert gif or link to demo
       - [X]  CRUDL Alignment
       - [X]  Data Model Ability
       - [X]  CRUDL Ability
-      - [ ]  Data Model Background
-      - [ ]  CRUDL Background
+      - [X]  Data Model Background
+      - [X]  CRUDL Background
       - [X]  Data Model Class
       - [X]  CRUDL Class
       - [X]  Data Model Condition
@@ -139,13 +139,13 @@ Insert gif or link to demo
       - [X]  CRUDL Race
       - [X]  Data Model Skill
       - [X]  CRUDL Skill
-    - [ ]  Items:
-      - [ ]  Data Model Item
-      - [ ]  CRUDL Item
-      - [ ]  Data Model Item Type
-      - [ ]  CRUDL Item Type
-      - [ ]  Data Model Item Category
-      - [ ]  CRUDL Item Category
+    - [X]  Items:
+      - [X]  Data Model Item
+      - [X]  CRUDL Item
+      - [X]  Data Model Item Type
+      - [X]  CRUDL Item Type
+      - [X]  Data Model Item Category
+      - [X]  CRUDL Item Category
 - [ ]  **Release 1.1.0**:
   - [ ]  Campaign Creation:
     - [ ]  Encounters:
